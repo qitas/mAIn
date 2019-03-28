@@ -1,4 +1,3 @@
-# pi_tpi
 Using a Raspberry Pi to program an ATTiny4/5/9/10.  But, mostly the $0.25 ATTiny10.  And, not necessarily a Raspberry Pi, but anything with GPIOs!
 
 Yep.  It works.  At least tested pretty thurrougly with my ATTiny10.  It can also read all the memories _AND_ run timings against the AVR to do processor clock calibration, as well as fuses and manual poking to flash en post to allow for custom configuration.
@@ -138,43 +137,6 @@ root@rasvive:~/git/pi_tpi# ./tpiflash r 1e9003 firmware.bin
 4180: c2 50 d0 40 4f 5f ce 5f df 4f 48 83 c2 50 d0 40 
 4190: a5 cf f8 94 ff cf ff ff ff ff ff ff ff ff ff ff 
 41a0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-41b0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-41c0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-41d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-41e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-41f0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4200: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4210: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4220: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4230: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4240: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4250: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4260: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4270: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4280: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4290: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-42a0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-42b0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-42c0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-42d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-42e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-42f0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4300: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4310: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4320: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4330: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4340: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4350: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4360: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4370: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4380: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-4390: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-43a0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-43b0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-43c0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-43d0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-43e0: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
-43f0: 01 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff 
 ```
 
 Here is an example of seeking to find the ideal OSCCAL value for 12.000 MHz...
@@ -202,19 +164,5 @@ root@rasvive:~/git/pi_tpi# ./tpiflash o 1e9003 12000000
 You could use this to flash in a value to flash to be read by your app!
 
 Note: You provide the device id as to prevent you from accidentally clobbering the wrong chip type.  That's what's up with the "device id" field.
-
-
-## Added notes.
-
-This was actually written in two days for Unit-E Technologies and is made available freely.  This project is licensable via the newbsd license.
-
-
-## Additional reading
-
-An Article about someone else doing something like this 6 years ago:
-https://hackaday.com/2012/08/23/programming-the-attiny10-with-an-arduino/
-
-Notes on initializing TPI mode:
-https://pcm1723.hateblo.jp/entry/20111208/1323351725
 
 
