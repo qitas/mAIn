@@ -1,9 +1,7 @@
 # [mAIn](https://github.com/qitas/mAIn) 
 #### qitas@qitas.cn
-#### 关联：[toolchain](https://github.com/sochub/toolchain) 
-### [简介](https://github.com/Qitas/mAIn/wiki)
 
-mAIn项目主要用于尝试嵌入式的自动开发流程，通过工具和逻辑的组合，最大化开发效率，包括设计编程和资源复用等功能
+[mAIn](https://github.com/qitas/mAIn) 项目用于探索嵌入式自动化开发环境，通过逐级迭代的方式实现源码的构建，优化多设备下的开发效率
 
 ### [编译相关](qitas/)
 
@@ -16,6 +14,8 @@ mAIn项目主要用于尝试嵌入式的自动开发流程，通过工具和逻�
 - [simulator](https://github.com/Qitas/simulator) 
 - [openOCD](https://github.com/ntfreak/openocd) 
 - [stlink](https://github.com/texane/stlink) 
+
+#### 关联：[toolchain](https://github.com/sochub/toolchain) 
 
 [![sites](qitas/qitas.png)](http://www.qitas.cn)
 ## 锻造最美之器
