@@ -20,9 +20,9 @@ for maindir, subdir, file_name_list in os.walk(path):
 
 dirs=os.listdir()
 for dir in dirs: 
-    if dir: 
+    if dir == sys.argv[1]: 
         print(dir)
-
+        
 try:
     fin = open(sys.argv[1], 'r', encoding="utf-8")
     fout = open(sys.argv[2], 'w', encoding="utf-8")
@@ -30,6 +30,9 @@ except IOError:
     e = "Can't open output file for writing: " + sys.argv[1]
     print( __file__, ":", e)
     sys.exit()
+
+
+
 #text = "JGood is a handsome boy, he is cool, clever, and so on..."
 #print(re.sub(r'\s+', '-', text))
 for line in fin.readlines():
