@@ -4,7 +4,8 @@ import re
 import sys
 
 try:
-    fin = open(sys.argv[1], 'r+', encoding="utf-8")
+    fin = open(sys.argv[1], 'r', encoding="utf-8")
+    fout = open(sys.argv[2], 'w', encoding="utf-8")
 except IOError:
     e = "Can't open output file for writing: " + sys.argv[1]
     print( __file__, ":", e)
@@ -14,16 +15,20 @@ except IOError:
 #print(re.sub(r'\s+', '-', text))
 
 for line in fin.readlines():
-    obj = re.search(r'\\Output\\',line)
-    #obj = re.sub(r'\\Output\\',r'\\obj\\',ln)
+    rall=re.compile(r'.*')
+    #obj = re.search(r'\\Output\\',line)
+    #folder_obj = re.sub(r'\\Output\\',r'\\obj\\',line)
     #print(obj)
     #obj.replace('\\Output\\', '\\obj\\')
-    if obj:
-        print(line)
-        buf = line.replace('\\Output\\', '\\obj\\')
-        print(buf)
-        print("fix Output")
-  
+    folder_obj = re.sub('<ListingPath>^[.]+^<ListingPath>',r'<ListingPath>.\\list\\</ListingPath>',line)  
+    #print(obj)
+    #obj.replace('\\Output\\', '\\obj\\')
+    #if folder_obj:       
+        #buf = line.replace('\\Output\\', '\\obj\\')
+        #print(buf)
+        #print("fix Output")
+    fout.writelines(folder_obj)
+
 fin.close
 
 
