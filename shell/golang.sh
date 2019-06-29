@@ -16,7 +16,8 @@ if [ ${#ret} -lt ${#str} ]; then
 	
 	echo 'export GOROOT='$HOME'/golang/root' >> ~/.bashrc
 	mkdir $HOME/golang/root
-	echo 'export GOPATH='$HOME'/golang/go' >> ~/.bashrc
+	echo 'export GOPATH='$HOME'/golang/path' >> ~/.bashrc
+	mkdir $HOME/golang/path
 	echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc
 	source ~/.bashrc
 	echo -e "export golang path\n${Line}"  
