@@ -48,12 +48,16 @@ elif [ $OPTION = '1' ]; then
 	clear
 	echo -e "golang env\n${Line}"
 	chmod +x $WorkPath/shell/golang.sh
-	$WorkPath/shell/golang
+	$WorkPath/shell/golang.sh
+	source ~/.bashrc
 	exit 0
 elif [ $OPTION = '2' ]; then
 	clear
 	echo -e "gogs config\n${Line}"
-	
+	go get -u github.com/gogs/gogs
+	cd $GOPATH/src/github.com/gogs/gogs
+	go build
+	cd -
 	exit 0
 else
 	whiptail --title "mAIn System" \

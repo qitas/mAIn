@@ -14,10 +14,10 @@ if [ ${#ret} -lt ${#str} ]; then
 		sudo tar -C /usr/local -xzf golang.tar.gz
 	fi
 	
-	echo 'export GOROOT=$HOME/local/go' >> $HOME/.bashrc
-	echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
-	echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> $HOME/.bashrc
-	source $HOME/.bashrc
+	echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
+	echo 'export GOPATH='$HOME'/go' >> ~/.bashrc
+	echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc
+	source ~/.bashrc
 	echo -e "export golang path\n${Line}"  
 else
 	echo -e "exist golang env\n${Line}"
