@@ -14,10 +14,8 @@ if [ ${#ret} -lt ${#str} ]; then
 		tar -C $HOME/golang -xzf golang.tar.gz
 	fi
 	
-	echo 'export GOROOT='$HOME'/golang/root' >> ~/.bashrc
-	mkdir $HOME/golang/root
-	echo 'export GOPATH='$HOME'/golang/path' >> ~/.bashrc
-	mkdir $HOME/golang/path
+	echo 'export GOROOT='$HOME'/golang/go' >> ~/.bashrc
+	echo 'export GOPATH='$HOME'/golang' >> ~/.bashrc
 	echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.bashrc
 	source ~/.bashrc
 	echo -e "export golang path\n${Line}"  
